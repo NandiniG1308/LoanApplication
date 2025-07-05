@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<form class="form">
+    <p class="title">Display your Loan</p>
+    <p class="message">Enter your loan to get loan ID</p>
+    <label>
+    <input type="number" required  [(ngModel)]="loan.loanId"  placeholder="" class="input" name="LoanID" #LoanID="ngModel"/>
+    <span>Loan ID</span>
+    
+    </label>
+  <button type="submit" class="btn btn-block" style="background-color: #385AC2; color: white; border: 2px white;" (click)="getLoanByLoanId(loan.loanId)">Get Emi</button>
+    <div class="card">
+      <a class= "card1">
+        <p>Loan Details</p>
+        <p class="small">loanId: {{loans.loanId}}</p>
+        <p class="small">loanAmt: {{loans.loanAmt}}</p>
+        <p class="small">duration: {{loans.duration}}</p>
+        <p class="small">loanType: {{loans.loanType}}</p>
+        <p class="small">monthlyEmi: {{loans.emi}}</p>
+      </a>
+    </div>
+    
+
+  </form>
+ 
+
+    

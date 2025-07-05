@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-6" style="margin-top: 100px;margin-bottom: 100px;">
+      <div class="row">
+        <div class="col-md-6" *ngFor="let x of accounts">
+          <div class="card royal-blue-card mb-4">
+            <h3 class="card-title account-title">Account Detail</h3>
+            <div class="card-body">
+              <p class="account-name">{{ x.accountHolderName }} {{ x.accountHolderLastName }}</p>
+              <div class="card-info">
+                <p class="card-text"><i class="fas fa-credit-card"></i> {{ x.accountNumber }}</p>
+                <hr>
+                <p class="card-text"><i class="fas fa-id-card"></i> {{ x.adharNumber }}</p>
+                <p class="card-text"><i class="fas fa-venus-mars"></i> {{ x.gender }}</p>
+                <p class="card-text"><i class="fas fa-phone"></i> {{ x.phoneNumber }}</p>
+                <p class="card-text"><i class="fas fa-id-card"></i>  {{ x.panCardNumber }}</p>
+                <p class="card-text"><i class="fas fa-envelope"></i> {{ x.email }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

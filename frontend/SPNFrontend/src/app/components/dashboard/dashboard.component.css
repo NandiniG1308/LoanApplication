@@ -1,0 +1,49 @@
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card {
+    width: 300px;
+    background-color: royalblue;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .card-header {
+    text-align: center;
+  }
+  
+  .card-dropdown {
+    display: none;
+    margin-top: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    color: royalblue;
+  }
+  
+  .card-dropdown.show {
+    display: block;
+  }
+  
+  .card-dropdown a {
+    display: block;
+    color: royalblue;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  .card-dropdown a:hover {
+    background-color: royalblue;
+    color: white;
+  }
+  
+  h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  

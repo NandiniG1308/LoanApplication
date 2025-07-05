@@ -1,0 +1,53 @@
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+.h-custom {
+  height: calc(100% - 73px);
+}
+
+@media (max-width: 450px) {
+  .h-custom {
+    height: 100%;
+  }
+}
+
+.col-md-4 {
+  margin-top: 150px;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 26px;
+  background-color: royalblue;
+  color: white;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.btn {
+  background-color: royalblue;
+  color: white;
+  margin: 0 auto; /* Center the button horizontally */
+  display: block; /* Ensure the button takes full width */
+  padding: 10px 15px;
+}
+
+.card {
+  background: none;
+  border: none;
+}

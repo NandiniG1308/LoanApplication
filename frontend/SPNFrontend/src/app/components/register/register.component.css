@@ -1,0 +1,30 @@
+
+
+.error{
+    border: 1px solid red; 
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h2{
+    font-size: 26px;
+    background-color: royalblue;
+    text-align-last: center;
+    padding-bottom: 5px;
+    color: white;
+}
+
+.card{
+    border: none;
+}
+
+.btn{
+    background-color: royalblue;
+    color: white;
+}
+

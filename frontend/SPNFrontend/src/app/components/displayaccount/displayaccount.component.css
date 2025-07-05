@@ -1,0 +1,30 @@
+.royal-blue-card {
+  border: 2px solid royalblue;
+  color: black;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+
+.account-title {
+  font-size: 25px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.account-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-info {
+  margin-top: 20px;
+}
+
+.card-text {
+  font-size: 16px;
+  margin-bottom: 5px;
+}

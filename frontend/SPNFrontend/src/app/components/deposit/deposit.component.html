@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="row justify-content-center align-items-center" style="margin-top: 100px;margin-bottom: 100px;">
+    
+    <div class="col-md-4">
+      <div class="card">
+        <h2 class="head card-title fs-3 text-center mt-3"  >DEPOSIT</h2>
+        <div class="card-body">
+          <div class="form-group mt-4">
+            <input class="form-control acc1" type="tel" [(ngModel)]="accountNumber" name="accountNumber" placeholder="Account Number" #accNum="ngModel" required> 
+          </div>
+          <div class="form-group mt-4">
+            <input class="form-control" type="tel" [(ngModel)]="depositAmount" name="amount" placeholder="Amount" #amount="ngModel" required>
+          </div>
+          <div class="form-group text-center mt-4">
+            <button class="btn btn-primary deposit" (click)="deposit(accNum.value, amount.value)">Deposit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

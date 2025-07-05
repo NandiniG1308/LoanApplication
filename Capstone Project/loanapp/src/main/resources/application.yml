@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: loan-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/spndb
+    username: root
+    password: nandinig
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+server:
+  port: 5068
+
+ 
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+    

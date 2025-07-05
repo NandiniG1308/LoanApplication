@@ -1,0 +1,59 @@
+<app-navbar ></app-navbar>
+
+<!-- <div class="container">
+<div class="card-container" >
+    <div class="card-name">Credit Card</div>
+    <div class="chip">
+      <img src="../../../assets/chip.jpg">
+    </div>
+    
+    <div class="card-data">
+      <div class="card-no">{{card.cardNumber}}</div>
+      <div class="expire-data">
+        <div class="expire-date">
+          <div class="date-label">MONTH/YEAR</div>
+          <div class="date" title="01/17">{{card.expMonth}}/{{card.expYear}}</div>
+          
+        </div>
+        
+        
+        <div class="card-type">
+          <img src="../../../assets/Mastercard.png">
+        </div>
+        
+      </div>
+      <div class="name">{{card.cardHolderName}}</div>
+    </div>
+  </div>
+  </div> -->
+
+  <div class="flip-card" style="margin-left: 550px; margin-top: 100px; margin-bottom: 100px;">
+    <div class="flip-card-inner text-light" style="font-size: 22px;" >
+        <div class="flip-card-front">
+            <p class="heading_8264">MASTERCARD</p>
+            <svg viewBox="0 0 48 48" height="36" width="36" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg" class="logo">
+            <path d="M32 10A14 14 0 1 0 32 38A14 14 0 1 0 32 10Z" fill="#ff9800"></path><path d="M16 10A14 14 0 1 0 16 38A14 14 0 1 0 16 10Z" fill="#d50000"></path>
+            <path d="M18,24c0,4.755,2.376,8.95,6,11.48c3.624-2.53,6-6.725,6-11.48s-2.376-8.95-6-11.48 C20.376,15.05,18,19.245,18,24z" fill="#ff3d00"></path>
+            </svg>
+            <svg xml:space="preserve" viewBox="0 0 50 50" height="30px" width="30px" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Layer_1" class="chip" version="1.1">
+                <image href="../../../assets/chip.jpg" y="0" x="0" height="50" width="50" id="image0"></image>
+            </svg>
+            <svg xml:space="preserve" viewBox="0 0 50 50" height="20px" width="20px" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Layer_1" class="contactless" version="1.1"> 
+               <image href="../../../assets/card" y="0" x="0" height="50" width="50" id="image0" style="margin-bottom: 5px;"></image>
+            </svg>
+            <p class="number" style="margin-top:2px; margin-bottom: 12px; letter-spacing:6px">{{card.cardNumber }}</p>
+            <br>
+            <br>
+            <p class="valid_thru" style="margin-left: 20px; margin-right: 300px; margin-top: 22px;">VALID THRU</p>
+            <p class="date_8264" style="margin-top: 5px;">{{card.expMonth}} / {{card.expYear}}</p>
+            <p class="name" style="letter-spacing:2px">{{card.cardHolderName | uppercase}} </p>
+        </div>
+        <div class="flip-card-back">
+            <div class="strip"></div>
+            <div class="mstrip"></div>
+            <div class="sstrip">
+              <p class="code">{{card.cvv}}</p>
+            </div>
+        </div>
+    </div>
+</div>

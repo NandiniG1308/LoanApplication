@@ -1,0 +1,109 @@
+<app-navbar></app-navbar>
+
+<div class="card">
+  <form [formGroup]="registerForm" (ngSubmit)="registerSubmitted()">
+    <div class="container">
+      
+      <div class="row">
+        
+        <div class="col text-center p-2 mb-3 bg-primary">
+          <span class="fs-3 text-white">Account Creation</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col mt-4">
+          <input type="text" class="form-control" id="accountHolderName" formControlName="accountHolderName" placeholder="First Name">
+          <div class="form-text text-danger" *ngIf="firstName?.invalid && firstName?.dirty">
+            First Name is required, too short, or contains numbers
+          </div>
+        </div>
+        <div class="col mt-4">
+          <input type="text" class="form-control" id="accountHolderLastName" formControlName="accountHolderLastName" placeholder="Last Name">
+          <div class="form-text text-danger" *ngIf="lastName?.invalid && lastName?.dirty">
+            Last Name is required, too short, or contains numbers
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col mb-3 mt-4">
+          <input type="email" class="form-control" id="email" formControlName="email" placeholder="Email Address">
+          <div class="form-text text-danger" *ngIf="Email?.invalid && Email?.dirty">
+            Email is required or invalid
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col mb-3 mt-4">
+          <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber" placeholder="Mobile Number">
+          <div class="form-text text-danger" *ngIf="Mobile?.invalid && Mobile?.dirty">
+            Mobile number is required, invalid, too short, or too long
+          </div>
+        </div>
+        <div class="col ps-3 mb-3 mt-2">
+          <div class="m-1">Gender</div>
+          <div class="form-check form-check-inline">
+            <input type="radio" class="form-check-input" value="M" id="male" formControlName="gender">
+            <label class="form-check-label" for="male">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="radio" class="form-check-input" value="F" id="female" formControlName="gender">
+            <label class="form-check-label" for="female">Female</label>
+          </div>
+          <div class="form-text text-danger" *ngIf="Gender?.invalid && Gender?.dirty">
+            Select Gender
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col mb-3 mt-4">
+          <input type="text" class="form-control" id="adharNumber" formControlName="adharNumber" placeholder="Aadhar Number">
+          <div class="form-text text-danger" *ngIf="Aadhar?.invalid && Aadhar?.dirty">
+            Aadhar number is required
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col mb-3 mt-4">
+          <input type="text" class="form-control" id="panCardNumber" formControlName="panCardNumber" placeholder="PAN Number">
+          <div class="form-text text-danger" *ngIf="PanCard?.invalid && PanCard?.dirty">
+            PanCard number is required
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col mb-3 mt-4">
+          <input type="text" class="form-control" id="address" formControlName="address" placeholder="Address">
+          <div class="form-text text-danger" *ngIf="Address?.invalid && Address?.dirty">
+            Address is required
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3 mt-4">
+        <select id="dropdownField" class="form-select" >
+          <option  value="" disabled selected>Select Account Type</option>
+          <option value="Current">Current</option>
+          <option value="Savings">Savings</option>
+        </select>
+        <div class="form-text text-danger" *ngIf="AccountType?.invalid && AccountType?.dirty">
+          Account type is required
+        </div>
+      </div>
+      
+
+      <div class="row">
+        <div class="col-6 offset-3 mb-4 mt-4">
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

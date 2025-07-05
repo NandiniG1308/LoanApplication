@@ -1,0 +1,23 @@
+.card{
+    margin-top:200px;
+ 
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 500px;
+    margin-left: 500px;
+    padding: 50px 24px;
+    
+    margin-bottom: 0px;
+   
+}
+
+.btn {
+    margin-top: 20px;
+    width: 50px;
+}
+.text-success{
+    margin-top: 20px;
+    font-size: 30px;
+}
+

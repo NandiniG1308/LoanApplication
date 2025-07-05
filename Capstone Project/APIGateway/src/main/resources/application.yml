@@ -1,0 +1,43 @@
+server:
+  port: 9000
+
+#api gateway configuration for routing and load balancing
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+          - Path=/api/v1/user/**
+
+        - id: creditcard-service
+          uri: lb://creditcard-service
+          predicates:
+          - Path=/api/v1/creditcard/**
+          
+        - id: account-service
+          uri: lb://account-service
+          predicates:
+          - Path=/api/v1/**
+
+        - id: loan-service
+          uri: lb://loan-service
+          predicates:
+          - Path=/api/v1/**
+
+
+
+#    to make it as a client of service discovery
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    hostname: localhost
+

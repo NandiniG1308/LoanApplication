@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+
+
+<form class="form">
+  
+    <p class="title">Loan Application </p>
+    
+        
+    <label>
+      <input required="" placeholder="" type="number" class="input" [(ngModel)]="loan.loanAmt" name="Amount">
+      <span>Amount</span>
+    </label>
+    <label>
+        <input required="" placeholder="" type="number" class="input" [(ngModel)]="loan.duration" name="duration">
+        <span>Enter the no of months</span>
+    </label>
+    <label>
+      <select required class="input" [(ngModel)]="loan.loanType" name="LoanType">
+        <option value="personalloan">Personal Loan</option>
+        <option value="educationloan">Educational Loan</option>
+        <option value="homeloan">Home Loan</option>
+      </select>
+      <span>Loan Type</span>
+    </label>
+    
+    <button class="submit" (click)="applyLoan()">Submit</button>
+    
+    <div class="card">
+      <a class= "card1">
+        <p>Loan Details</p>
+        <p class="small">loanId: {{loanId}}</p>
+        <p class="small">monthlyEmi: {{monthlyEmi}}</p>
+      </a>
+    </div>
+    
+  </form>
+
+
+  

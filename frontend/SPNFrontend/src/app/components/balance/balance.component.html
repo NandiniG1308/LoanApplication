@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+
+<div class="card mx-auto" style="width: 500px; margin-top: 100px; margin-bottom: 50px; padding: 50px 24px; position: relative;">
+  
+  <div class="form-group">
+    <input class="form-control form-control-lg" type="text" id="accountNumber" [(ngModel)]="account.accountNumber" name="accountNumber" #accountNumber="ngModel" placeholder="Enter your account number">
+  </div>
+  
+  <button type="submit" class="btn btn-primary mt-3" style="width: 100%;" (click)="getBalanceByName(accountNumber.value)">Get Balance</button>
+  
+  <h2 class="text-success mt-3" style="font-size: 30px;">Total balance: {{Balance | currency:'INR'}}</h2>
+</div>

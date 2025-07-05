@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-lg navbar-light navbar-fixed navbar-fixed-top" style="background-color: royalblue">
+  <div class="container">
+    <a class="navbar-brand me-2" href="#">
+      <img src="https://w7.pngwing.com/pngs/719/95/png-transparent-ness-technologies-teaneck-business-logo-sk-blue-text-service.png" height="45" alt="SPNlogo" loading="lazy" style="margin-top: -1px; border-radius: 50%;" />
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarButtonsExample"
+      aria-controls="navbarButtonsExample"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" id="navbarButtonsExample">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle active"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            style="color: white; font-size: 20px;"
+          >
+            CreditCard
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li class="link1"><a class="dropdown-item link1" routerLink="/creditcard">Apply CreditCard</a></li>
+            <li class="link1"><a class="dropdown-item link1" routerLink="/displaycreditcard">Display CreditCard</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle active"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            style="color: white; font-size: 20px;"
+          >
+            Account
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li class="link1"><a class="dropdown-item link1" routerLink="/account">Create Account</a></li>
+            <li class="link1"><a class="dropdown-item link1" routerLink="/balance">Get Balance</a></li>
+            <li class="link1"><a class="dropdown-item link1" routerLink="/deposit">Deposit Amount</a></li>
+            <li class="link1"><a class="dropdown-item link1" routerLink="/withdraw">Withdraw Amount</a></li>
+            <li class="link1"><a class="dropdown-item link1" routerLink="/displayaccount">Display AccountDetails</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle active"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            style="color: white; font-size: 20px;"
+          >
+            Loans
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li class="link1"><a class="dropdown-item link1" routerLink="/loan">Apply Loan</a></li>
+            <li class="link1"><a class="dropdown-item link1" routerLink="/payloan">Pay monthly EMI</a></li>
+            <li class="link1"><a class="dropdown-item link1" routerLink="/displayloan">Display Loan</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" (click)="logout()" style="color: white; font-size: 20px;">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

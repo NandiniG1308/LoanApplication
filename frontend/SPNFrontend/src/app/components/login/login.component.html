@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 d-flex align-items-center">
+      <img src="../../../assets/login.jpg" class="img-fluid" alt="login image" height="100px">
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <h2>LOGIN</h2>
+        <div class="mt-4">
+          <input id="email" type="email" class="form-control" ngModel name="email" #email="ngModel" placeholder="Email" required>
+          <div *ngIf="email.errors && email.touched">
+            <small class="text-danger" *ngIf="email.errors['required']">Email is not valid</small>
+          </div>
+        </div>
+        <div class="mt-4">
+          <input id="password" type="password" class="form-control" ngModel name="password" #password="ngModel" placeholder="Password" required>
+          <div *ngIf="password.errors && password.touched">
+            <small class="text-danger" *ngIf="password.errors['required']">Password is not valid</small>
+          </div>
+        </div>
+        <div class="mt-4"> 
+          <button id="btnLogin" class="btn" (click)="Login(email.value, password.value)">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

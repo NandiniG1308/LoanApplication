@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+
+<form class="form center-form">
+    <p class="title">Pay EMI</p>
+    
+    <label>
+      <input required="" placeholder="" type="tel" class="input" [(ngModel)]="loan.loanId" name="loanId" #loanId="ngModel">
+      <span>Loan ID</span>
+    </label>
+    <label>
+        <input required="" placeholder="" type="number" class="input" [(ngModel)]="loan.loanAmt" name="loanAmt" #loanAmt="ngModel">
+        <span>Amount</span>
+    </label>
+    
+    <button class="submit" (click)="depositAmount(loanId.value, loanAmt.value)">Deposit</button>
+    
+</form>

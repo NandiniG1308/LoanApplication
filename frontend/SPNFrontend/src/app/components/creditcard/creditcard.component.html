@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="row justify-content-center align-items-center" style="margin-top: 100px; margin-bottom: 100px;">
+    
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Apply for Credit Card</h2>
+          <div class="mt-2">
+            <input id="phoneNo" type="tel" class="form-control" [(ngModel)]="creditcard.creditLimit" placeholder="Credit Limit" name="creditLimit" #creditLimit="ngModel" required minlength="10" maxlength="10" [ngClass]="{ 'error': creditLimit.errors && creditLimit.touched }">
+            <div *ngIf="creditLimit.errors && creditLimit.touched">
+              <small class="text-danger" *ngIf="creditLimit.errors['required']">Credit Limit is required</small>
+              <small class="text-danger" *ngIf="creditLimit.errors['pattern']">Credit Limit should be in digits</small>
+              <small class="text-danger" *ngIf="creditLimit.errors['max'] || creditLimit.errors['min']">Please enter valid Credit Limit</small>
+            </div>
+          </div>
+          <div class="mt-2">
+            <input id="cvv" type="text" class="form-control" [(ngModel)]="creditcard.email" placeholder="Email" name="email" #email="ngModel" required maxlength="50" [ngClass]="{ 'error': email.errors && email.touched }">
+            <div *ngIf="email.errors && email.touched">
+              <small class="text-danger" *ngIf="email.errors['required']">Email is required</small>
+              <small class="text-danger" *ngIf="email.errors['maxlength']">Maximum 50 characters are allowed</small>
+            </div>
+          </div>
+          <div class="mt-2">
+    
+            <select class="form-select" [(ngModel)]="creditcard.cardType" required name="cardType" #cardType="ngModel" [ngClass]="{ 'error': cardType.errors && cardType.touched }" aria-placeholder="cardType">
+              <option value="default" selected disabled >Select Card Type</option>
+              <option value="visa">Visa</option>
+              <option value="platinum">Platinum</option>
+          </select>
+        
+          
+           
+            <div *ngIf="cardType.errors && cardType.touched">
+              <small class="text-danger" *ngIf="cardType.errors['required']">Card Type is required</small>
+              <small class="text-danger" *ngIf="cardType.errors['pattern']">Please enter a valid Card Type</small>
+            </div>
+          </div>
+
+         
+          
+          <div class="mt-2">
+            <input id="cardHolderName" type="text" class="form-control" [(ngModel)]="creditcard.cardHolderName" placeholder="Card Holder Name" name="cardHolderName" #cardHolderName="ngModel" [ngClass]="{ 'error': cardHolderName.errors && cardHolderName.touched }" required>
+            <div *ngIf="cardHolderName.errors && cardHolderName.touched">
+              <small class="text-danger" *ngIf="cardHolderName.errors['required']">Card Holder Name is required</small>
+              <small class="text-danger" *ngIf="cardHolderName.errors['maxlength']">Maximum 32 characters are allowed</small>
+            </div>
+          </div>
+          <div class="mt-2">
+            <button id="btnRegister" class="btn btn-primary" (click)="AddCreditCard()">Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
